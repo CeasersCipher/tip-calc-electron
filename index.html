@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link href="normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+    />
+  </head>
+  <style>
+    .TipButton:hover {
+      background-color: #666;
+      color: white; 
+    }
+    h1, footer, p {
+      text-align: center;
+      font-family: Tahoma;
+    }
+    .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 555px;
+    height: 650px;
+    border-radius: 30px;
+    background: linear-gradient(132.23deg, rgba(78, 223, 255, 0.512) 2.32%, rgba(255, 255, 255, 0.10) 109.87%);
+    transform:translate(-50%,-50%);
+    backdrop-filter: blur(26px) saturate(100%) contrast(80%) brightness(90%);
+    -webkit-backdrop-filter: blur(26px) saturate(100%) contrast(80%) brightness(90%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+    } 
+    .Border {
+      font-family: "Lucida Console", "Courier New", monospace;
+      border-radius: 4px;
+    }
+    body {
+      animation: slide 60s linear infinite alternate;
+      background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX1169530.jpg");
+      background-repeat: repeat;
+    }
+
+    @keyframes slide {
+      to {
+        background-position: 0 50%;
+        }
+      }
+
+  </style>
+  <body>
+    <div class="card">
+      <header>
+        <h1>Tip Calculator</h1>
+      </header>
+      <label for="billAmount">Bill Amount</label>
+      <input type="text" id="billAmount" class="Border" />
+      <button id="btn10" class="TipButton Border">10%</button>
+      <button id="btn15" class="TipButton Border">15%</button>
+      <button id="btn20" class="TipButton Border">20%</button>
+      <input type="text" placeholder="Custom Tip Amount %" id="customTip" class="Border"/>
+      <button id="btncalculate" class="TipButton Border">Calculate</button>
+      <h4>Result</h4>
+      <p>Tip amount: <output id="tipAmount"></output><br /></p>
+      <p>Total:<output id="total"></output></p>
+      <footer>
+        <p>Copyright 2021 | Illicitica</p>
+      </footer>
+    </div>
+    <script src="tip_calculator.js"></script>
+  </body>
+</html>

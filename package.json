@@ -1,0 +1,25 @@
+{
+  "name": "tip_calculator",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A simple vanilla JS tip calculator, packaged into an electron app!",
+  "author": "xyz <xyz@gmail.com>",
+  "main": "./main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "npm install && electron ./app",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  }
+}
